@@ -1,0 +1,219 @@
+.transactionlist-board {
+	width: 41%;
+	position: relative;
+	background: #fff;
+	border-radius: 4px;
+	margin-bottom: 30px;
+	padding-top: 15px;
+	-webkit-box-shadow: 0 3px 24px 0 rgb(0 0 0 / 12%);
+	box-shadow: 0 3px 24px 0 rgb(0 0 0 / 12%);
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+.tab-container {
+	border-bottom: 1px solid #e0e0e0;
+	text-align: center;
+}
+.nav-tab li {
+	vertical-align: middle;
+	font-size: 14px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	min-width: 150px;
+	margin-left: auto;
+	flex: 0 1 auto;
+	font-weight: 500;
+	line-height: normal;
+	max-width: 264px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.nav-tab li a {
+	font-size: 14px;
+	line-height: 16px;
+	opacity: 1;
+	color: rgba(0, 0, 0, 0.54);
+	font-weight: 500;
+	padding: 15px 24px;
+	outline: none;
+	text-align: center;
+	border-bottom: 3px solid #fff;
+}
+.nav-tab li a:hover {
+	border-bottom: 3px solid #2db84c;
+	color: #2db84c;
+}
+.transaction-overview {
+	padding: 10px 0;
+	border-bottom: 30px solid #cccccc3b;
+}
+.transaction-card {
+	border-bottom: 30px solid #cccccc3b;
+}
+.transaction-card:last-child {
+	border-bottom: none;
+}
+.outflow {
+	color: #333;
+	display: flex;
+	font-size: 14px;
+	line-height: 16px;
+	position: relative;
+	transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+	margin-left: 0;
+	padding: 8px 16px;
+	justify-content: space-between;
+}
+.amount {
+	display: table-cell;
+	text-align: right;
+	max-width: 180px;
+	font-size: 14px;
+}
+.amount.expense {
+	color: #e51c23;
+}
+.transaction-header-content {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	padding: 8px 16px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.date-view {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.view-date {
+	font-size: 34px;
+	display: inline-block;
+	color: #333;
+	line-height: 40px;
+	font-weight: 400;
+	width: 48px;
+	margin-right: 8px;
+}
+.view-day {
+	display: inline-block;
+	text-transform: capitalize;
+	text-align: left;
+}
+.day {
+	font-size: 12px;
+	display: block;
+	line-height: 14px;
+	color: rgba(0, 0, 0, 0.54);
+	font-weight: 700;
+}
+.month-year {
+	font-size: 12px;
+	display: block;
+	line-height: 14px;
+	color: rgba(0, 0, 0, 0.54);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.vendor-name {
+	color: rgb(0 0 0 / 61%);
+}
+
+.transaction-item-wrap {
+	border-bottom: 1px dashed #2f2f2f17;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: block;
+	font-family: Roboto, sans-serif;
+	-webkit-tap-highlight-color: transparent;
+	cursor: pointer;
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: inherit;
+	position: relative;
+	color: #333;
+	line-height: 16px;
+	-webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+	transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+	background: 0 0;
+}
+.transaction-item-wrap:last-child {
+	border-bottom: none;
+}
+.transaction-item {
+	margin-left: 0;
+	padding: 16px 16px 16px 72px;
+}
+.transaction-item:hover {
+	background-color: rgba(45, 184, 76, 0.08);
+}
+.transaction-icon {
+	color: #fff;
+	background-color: transparent;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	font-size: 24px;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 12px;
+	left: 16px;
+	border: none;
+}
+.transaction-category-wrap {
+	font-size: 14px !important;
+	line-height: 15px;
+	white-space: nowrap;
+	display: table;
+	width: 100%;
+	margin-bottom: 0;
+}
+.transaction-row {
+	display: table-row;
+}
+.category-name span {
+	display: table-cell;
+	padding-right: 15px;
+	max-width: 125px;
+	font-size: 14px;
+	line-height: 20px;
+	color: rgba(0, 0, 0, 0.87);
+	font-weight: 500;
+}
+
+.description {
+	font-size: 12px !important;
+	margin-top: 0 !important;
+	line-height: 16px;
+	height: 16px;
+	margin: 0;
+	color: rgba(0, 0, 0, 0.54);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
