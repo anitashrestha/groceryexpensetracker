@@ -1,28 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 //import SearchBar from "../components/searchBar";
-import TransactionCard from "../components/AccordionComponent/Accordion";
-import { transactionData } from "../data/content";
+// import TransactionCard from "../components/AccordionComponent/TransactionCard";
+import AccordionList from "../components/AccordionComponent/TransactionCard";
+import TransactionData from "../components/AccordionComponent/TransactionData";
 
 const HomePage = () => {
+	const [toggle, setToggle] = useState(null);
+	let handleToggle = (id) => {
+		if (toggle === id) {
+			setToggle(null);
+			return false;
+		}
+		setToggle(id);
+	};
+
 	return (
 		<>
 			<div className="container">
 				{/* side fixed header */}
 				<div className="fixed-menu-bar">
 					<span className="menu-item">
-						<a className="menu-link">Menu</a>
+						<span className="menu-link">Menu</span>
 					</span>
 					<span className="menu-item">
-						<a className="menu-link">Transactions</a>
+						<span className="menu-link">Transactions</span>
 					</span>
 					<span className="menu-item">
-						<a className="menu-link">Report</a>
+						<span className="menu-link">Report</span>
 					</span>
 					<span className="menu-item">
-						<a className="menu-link">Budget</a>
+						<span className="menu-link">Budget</span>
 					</span>
 					<span className="menu-item">
-						<a className="menu-link">Vendors</a>
+						<span className="menu-link">Vendors</span>
 					</span>
 				</div>
 
@@ -67,13 +77,13 @@ const HomePage = () => {
 						<div className="tab-container">
 							<ul className="nav-tab">
 								<li>
-									<a>LAST MONTH</a>
+									<button>LAST MONTH</button>
 								</li>
 								<li>
-									<a>THIS MONTH</a>
+									<button>THIS MONTH</button>
 								</li>
 								<li>
-									<a>NEXT MONTH</a>
+									<button>NEXT MONTH</button>
 								</li>
 							</ul>
 						</div>
@@ -90,7 +100,7 @@ const HomePage = () => {
 							<div></div>
 
 							{/* transaction card start*/}
-							<div className="transaction-card">
+							{/* <div className="transaction-card">
 								<div className="transaction-list">
 									<div className="transaction-header">
 										<div className="transaction-header-content">
@@ -137,14 +147,21 @@ const HomePage = () => {
 										</div>
 									</div>
 								</div>
-							</div>
+							</div> */}
 							{/* transaction card end*/}
 
 							{/* Accordion */}
 
-							<div className="accordion">
-								<TransactionCard data={transactionData} />
-							</div>
+							{/* <TransactionCard
+									transactionData={TransactionData}
+									toggle={toggle}
+									handleToggle={handleToggle}
+								/> */}
+							<AccordionList
+								transactionData={TransactionData}
+								toggle={toggle}
+								handleToggle={handleToggle}
+							/>
 
 							{/* Accordion */}
 						</div>

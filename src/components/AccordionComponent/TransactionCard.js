@@ -1,36 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Accordion.css";
 
-const TransactionCard = (props) => {
-	const [isActive, setIsActive] = useState(false);
-
-	if (typeof props.data !== "object") {
-		console.error("Data is not an object");
-		return;
-	}
-
-	return props.data.map((transactionData) => {
+const AccordionList = ({ transactionData, toggle, handleToggle }) => {
+	return transactionData.map((transactionData, id) => {
 		const date = new Date(transactionData.date);
+
 		const day = date.getDate().toString().padStart(2, "0");
+
 		const weekday = new Intl.DateTimeFormat("en-US", {
 			weekday: "long",
 		}).format(date);
 
-		const month = new Intl.DateTimeFormat("en-US", { month: "long" }).format(
-			date
-		);
+		const month = new Intl.DateTimeFormat("en-US", {
+			month: "long",
+		}).format(date);
 
 		const year = date.getFullYear();
 
-		let key = Math.random();
 		return (
-			<div id={key} key={key} className="transaction-card">
+			<div key={id} className="transaction-card">
 				<div className="transaction-header">
 					<div
 						key="{transactionData.date}"
 						className="transaction-header-content"
-						onClick={() => setIsActive(!isActive)}
+						onClick={() => handleToggle(id)}
 					>
 						<div className="date-view">
 							<span className="view-date">{day}</span>
@@ -52,10 +46,10 @@ const TransactionCard = (props) => {
 							</span>
 						</div>
 
-						<div>{isActive ? "-" : "+"}</div>
+						<div>{id === toggle ? "-" : "+"}</div>
 					</div>
 				</div>
-				{isActive && <AccordionContent data={transactionData.items} />}
+				{id === toggle ? <AccordionContent data={transactionData.items} /> : ""}
 			</div>
 		);
 	});
@@ -86,4 +80,4 @@ const AccordionContent = (props) => {
 	});
 };
 
-export default TransactionCard;
+export default AccordionList;

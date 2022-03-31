@@ -74,6 +74,9 @@
 .amount.expense {
 	color: #e51c23;
 }
+.transaction-header {
+	cursor: pointer;
+}
 .transaction-header-content {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 	padding: 8px 16px;
@@ -216,4 +219,7 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+.menu-link {
+	font-size: 12px;
 }

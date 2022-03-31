@@ -1,10 +1,10 @@
-export const transactionData = [
+const TransactionData = [
 	{
+		id: "1",
 		date: "2019-12-2",
 		location: "Sutherland",
 		vendors: "Coles",
 		total_spent: "$126",
-		_uid: "item-1",
 		items: [
 			{
 				category: "rice",
@@ -30,11 +30,11 @@ export const transactionData = [
 		],
 	},
 	{
+		id: "2",
 		date: "2022-02-17",
 		location: "Hurstville",
 		vendors: "Woolworths",
 		total_spent: "$12",
-		_uid: "item-2",
 		items: [
 			{
 				category: "household",
@@ -60,3 +60,4 @@ export const transactionData = [
 		],
 	},
 ];
+export default TransactionData;
