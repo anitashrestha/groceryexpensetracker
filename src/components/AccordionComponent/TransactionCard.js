@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Accordion.css";
+import "./TransactionCard.css";
 
 const AccordionList = ({ transactionData, toggle, handleToggle }) => {
 	return transactionData.map((transactionData, id) => {
