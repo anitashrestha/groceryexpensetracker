@@ -1,17 +1,47 @@
 import React, { useState } from "react";
 //import SearchBar from "../components/searchBar";
 // import TransactionCard from "../components/AccordionComponent/TransactionCard";
-import AccordionList from "../components/AccordionComponent/TransactionCard";
+import TransactionList from "../components/AccordionComponent/TransactionList";
 import TransactionData from "../components/AccordionComponent/TransactionData";
+import Modal from "../components/Modal";
 
 const HomePage = () => {
 	const [toggle, setToggle] = useState(null);
+	const [isPopupOpen, setPopupIsOpen] = useState(false);
+
+	const [formInputData, setFormInputData] = useState({
+		fullName: "",
+		emailAddress: "",
+		salary: "",
+	});
+
 	let handleToggle = (id) => {
 		if (toggle === id) {
 			setToggle(null);
 			return false;
 		}
 		setToggle(id);
+	};
+
+	const handleChange = (evnt) => {
+		const newInput = (data) => ({
+			...data,
+			[evnt.target.name]: evnt.target.value,
+		});
+		setFormInputData(newInput);
+	};
+
+	const handleSubmit = (evnt) => {
+		evnt.preventDefault();
+		const checkEmptyInput = !Object.values(formInputData).every(
+			(res) => res === ""
+		);
+		if (checkEmptyInput) {
+			const newData = (data) => [...data, formInputData];
+			// setRowsData(newData);
+			const emptyInput = { fullName: "", emailAddress: "", salary: "" };
+			setFormInputData(emptyInput);
+		}
 	};
 
 	return (
@@ -65,7 +95,14 @@ const HomePage = () => {
 							</div>
 							{/* <SearchBar /> */}
 							<div className="add-btn">
-								<button className="btn-green">ADD TRANSACTIONS</button>
+								<button
+									className="btn-green"
+									onClick={() => {
+										setPopupIsOpen(!isPopupOpen);
+									}}
+								>
+									ADD TRANSACTIONS
+								</button>
 							</div>
 						</div>
 					</div>
@@ -97,76 +134,23 @@ const HomePage = () => {
 									</div>
 								</div>
 							</div>
-							<div></div>
 
-							{/* transaction card start*/}
-							{/* <div className="transaction-card">
-								<div className="transaction-list">
-									<div className="transaction-header">
-										<div className="transaction-header-content">
-											<div className="date-view">
-												<span className="view-date">09</span>
-												<span className="view-date">
-													<span className="day">Sunday</span>
-													<span className="month-year">January 2022</span>
-												</span>
-											</div>
-
-											<div className="vendor">
-												<span className="vendor-name">Coles</span>
-											</div>
-
-											<div className="amount-view">
-												<span className="amount expense">$150</span>
-											</div>
-										</div>
-									</div>
-
-									<div className="transaction-items">
-										<div className="transaction-item-wrap">
-											<div className="transaction-item">
-												<div className="transaction-item-content">
-													<img
-														alt=""
-														className="transaction-icon"
-														src="https://static.moneylover.me/img/icon/ic_category_foodndrink.png"
-													/>
-													<p className="transaction-category-wrap">
-														<span className="transaction-row">
-															<span className="category-name">
-																<span className="">Rice</span>
-															</span>
-															<span className="expense amount">$15</span>
-														</span>
-													</p>
-													<p className="description">
-														starlite rice from nepali store
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div> */}
-							{/* transaction card end*/}
-
-							{/* Accordion */}
-
-							{/* <TransactionCard
-									transactionData={TransactionData}
-									toggle={toggle}
-									handleToggle={handleToggle}
-								/> */}
-							<AccordionList
+							<TransactionList
 								transactionData={TransactionData}
 								toggle={toggle}
 								handleToggle={handleToggle}
+								handleSubmit={handleSubmit}
+								handleChange={handleChange}
 							/>
 
 							{/* Accordion */}
 						</div>
 					</div>
 				</div>
+
+				{/* Add Transactions form popup				 */}
+
+				{isPopupOpen && <Modal isOpen={isPopupOpen} setOpen={setPopupIsOpen} />}
 			</div>
 		</>
 	);

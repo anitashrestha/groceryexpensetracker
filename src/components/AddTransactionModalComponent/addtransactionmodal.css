@@ -1,0 +1,28 @@
+.header-title {
+	padding: 20px 40px;
+	font-size: 20px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.87);
+	font-weight: 500;
+	-webkit-box-shadow: 0 1px 0 0 #e0e0e0;
+	box-shadow: 0 1px 0 0 #e0e0e0;
+}
+.transaction-content {
+	padding: 24px 40px 0;
+	max-height: 75vh;
+	overflow-y: auto;
+}
+
+.transaction-action {
+	padding: 14px 40px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.action-btn {
+	background-color: #f5f5f5;
+	min-width: 96px;
+	padding: 0 20px;
+}
+.cancel {
+	color: #2db84c;
+}
