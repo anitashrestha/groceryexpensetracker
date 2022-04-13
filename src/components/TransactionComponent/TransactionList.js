@@ -2,12 +2,7 @@ import React from "react";
 
 import "./TransactionCard.css";
 
-const TransactionList = ({
-	transactionData,
-	toggle,
-	handleToggle,
-	
-}) => {
+const TransactionList = ({ transactionData, toggle, handleToggle }) => {
 	return transactionData.map((transactionData, id) => {
 		const date = new Date(transactionData.date);
 
