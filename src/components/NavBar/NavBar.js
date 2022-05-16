@@ -10,11 +10,6 @@ const NavBar = () => {
 				<div className="mobile-menu"></div>
 				<div className="main-menu-container">
 					<div className="main-menu">
-						<div className="logo-container">
-							<a href="/" className="logo manu-item" aria-label="Homepage">
-								TRACT-IT
-							</a>
-						</div>
 						<div className="nav-container db">
 							<div className="pb db menu-item">
 								<Link to="/transactions">Transactions</Link>

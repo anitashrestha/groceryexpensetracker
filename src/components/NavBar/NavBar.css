@@ -22,6 +22,9 @@
 	padding-bottom: 35px;
 }
 
+.main-menu-container {
+	margin-top: 75px;
+}
 /* Responsive css */
 @media screen and (min-width: 1080px) {
 	.navbar-container {
@@ -31,7 +34,7 @@
 		position: fixed;
 		top: 0;
 		box-shadow: 0 3px 7px 0 rgb(0 0 0 / 27%);
-		z-index: 200;
+		z-index: 1;
 		background: #fff;
 	}
 	.main-menu-container {

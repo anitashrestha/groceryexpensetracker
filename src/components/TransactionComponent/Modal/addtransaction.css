@@ -1,0 +1,119 @@
+/* Modal basic styles */
+.modal {
+	position: fixed;
+	background: #00000050;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 999;
+}
+
+.modal-main {
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	height: auto;
+	max-height: 70vh;
+	margin-top: calc(100vh - 85vh - 20px);
+	background: #fff;
+	border-radius: 4px;
+	padding: 20px;
+	border: 1px solid #999;
+	overflow: auto;
+}
+
+.close-icon {
+	content: "x";
+	cursor: pointer;
+	position: fixed;
+	right: calc(15% - 10px);
+	top: calc(100vh - 85vh - 30px);
+	background: #fff;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	line-height: 20px;
+	text-align: center;
+	border: 1px solid #999;
+	font-size: 20px;
+	color: #999;
+	z-index: 1;
+}
+
+/* Modal basic styles */
+
+.header-title {
+	padding: 20px 40px;
+	font-size: 20px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.87);
+	font-weight: 500;
+	-webkit-box-shadow: 0 1px 0 0 #e0e0e0;
+	box-shadow: 0 1px 0 0 #e0e0e0;
+	text-align: left;
+}
+.transaction-content {
+	padding: 24px 40px 0;
+	max-height: 75vh;
+	overflow-y: auto;
+}
+
+.transaction-action {
+	padding: 14px 40px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+.action-btn {
+	min-width: 96px;
+	padding: 8px 8px;
+	text-transform: uppercase;
+	border: none;
+	font-size: 14px;
+	font-weight: 500;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.cancel {
+	color: #2db84c;
+	margin-right: 10px;
+}
+.save {
+	background-color: #2db84c;
+	color: #fff;
+}
+.form-row {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 15px;
+}
+.form-row .col {
+	width: 32%;
+}
+.form-control,
+.col-textarea textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	color: rgb(89 89 89 / 87%);
+}
+.form-row .col-textarea {
+	width: 66%;
+}
+.col-textarea textarea {
+	height: 45px;
+}
+.error-msg {
+	color: #f73535;
+	text-align: left;
+	font-size: 12px;
+	padding-top: 5px;
+}
+.add-transaction {
+	display: flex;
+	justify-content: flex-end;
+	padding: 15px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	margin-bottom: 20px;
+}

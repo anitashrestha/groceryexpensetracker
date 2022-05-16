@@ -1,7 +1,6 @@
 const TransactionData = [
 	{
-		id: "1",
-		date: "2019-12-2",
+		date: "2022-05-12T09:49:59.819Z",
 		location: "Sutherland",
 		vendors: "Coles",
 		total_spent: "$126",
@@ -30,8 +29,7 @@ const TransactionData = [
 		],
 	},
 	{
-		id: "2",
-		date: "2022-02-17",
+		date: "2022-05-12T09:49:59.819Z",
 		location: "Hurstville",
 		vendors: "Woolworths",
 		total_spent: "$12",

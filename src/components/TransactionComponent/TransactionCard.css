@@ -1,5 +1,5 @@
 .transactionlist-board {
-	width: 41%;
+	width: 100%;
 	position: relative;
 	background: #fff;
 	border-radius: 4px;
@@ -12,7 +12,6 @@
 }
 .tab-container {
 	border-bottom: 1px solid #e0e0e0;
-	text-align: center;
 }
 .nav-tab li {
 	vertical-align: middle;
@@ -139,8 +138,6 @@
 	box-sizing: border-box;
 	display: block;
 	font-family: Roboto, sans-serif;
-	-webkit-tap-highlight-color: transparent;
-	cursor: pointer;
 	text-decoration: none;
 	margin: 0;
 	padding: 0;
@@ -149,9 +146,7 @@
 	position: relative;
 	color: #333;
 	line-height: 16px;
-	-webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-	transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-	background: 0 0;
+	background-color: rgba(45, 184, 76, 0.08);
 }
 .transaction-item-wrap:last-child {
 	border-bottom: none;
@@ -160,8 +155,10 @@
 	margin-left: 0;
 	padding: 16px 16px 16px 72px;
 }
-.transaction-item:hover {
-	background-color: rgba(45, 184, 76, 0.08);
+
+.transaction-item-content {
+	display: flex;
+	justify-content: space-between;
 }
 .transaction-icon {
 	color: #fff;
@@ -222,4 +219,7 @@
 }
 .menu-link {
 	font-size: 12px;
+}
+.item-content {
+	width: 71%;
 }

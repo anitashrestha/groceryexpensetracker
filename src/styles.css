@@ -3,6 +3,9 @@
 	margin: 0;
 	padding: 0;
 }
+body {
+	font-family: "Roboto", sans-serif;
+}
 a {
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.54);
@@ -72,6 +75,7 @@ li {
 .nav-bar .amount {
 	display: inline-block;
 	font-size: 14px;
+	line-height: 25px;
 }
 
 .right-header-item {
@@ -84,21 +88,64 @@ li {
 }
 .btn {
 	cursor: pointer;
+	height: auto;
+	min-width: auto;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-weight: 500;
 }
 .btn-green {
 	background: #1aa333;
 	color: #fff;
 	height: auto;
-	min-width: auto;
+	border: 1px solid #1aa333;
+}
+
+.btn-green-text {
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: #1aa333;
 	font-size: 14px;
 	line-height: 16px;
-	border: 1px solid #1aa333;
 	border-radius: 4px;
-	padding: 8px 12px;
+	padding: 0;
+	margin: 0;
 	font-weight: 500;
 }
-.main-container {
+.btn-red-text {
+	cursor: pointer;
+	border: none;
+	background: none;
+	color: #f25a5a;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 4px;
+	padding: 0;
+	margin-left: 15px;
+	font-weight: 500;
+}
+.master-container {
 	margin-top: 96px;
+	max-width: 1632px;
+	min-width: 640px;
+	padding-left: 0;
+	width: calc(100% - 124px);
+	margin-left: 104px;
+}
+.master-detail-container {
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin: -16px;
+	padding: 16px 16px 0;
+	min-height: 85vh;
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+	display: flex;
 }
 .search {
 	font-family: sans-serif;
@@ -109,4 +156,39 @@ li {
 	gap: 20px;
 	/* height: 100vh; */
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	margin-right: 10px;
+}
+
+.search input {
+	padding: 7px 10px;
+	font-size: 14px;
+	line-height: 19px;
+	font-family: "Roboto", sans-serif;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* changes */
+.header-container {
+	margin-right: 104px;
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	z-index: 200;
+	margin-left: 20px;
+	height: 68px;
+	padding-left: 0;
+	align-items: center;
+	width: calc(100% - 44px);
+}
+.logo-container {
+	margin-right: 20px;
+	padding: 0;
+}
+.logo-container a {
+	font-size: 20px;
+}
+.logo-container span {
+	color: #1aa333;
+	font-weight: 700;
 }
